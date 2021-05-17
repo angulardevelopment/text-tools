@@ -4,6 +4,9 @@ Text tools
 packages used-
 crypto-js, file-saver
 
+
+It also has different types of text tools like generating random strings, numbers , find and replace functionality.
+
 # Tools
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
