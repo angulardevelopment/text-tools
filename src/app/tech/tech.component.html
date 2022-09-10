@@ -1,4 +1,3 @@
-
 <div class="back">
   <h2> Random number generator</h2>
   <span>Amount of numbers to be generated </span>
@@ -15,12 +14,13 @@
   </div>
   <span>Output: </span>
   <input type="text" id="myInput" [(ngModel)]="noOutput" disabled>
+
   <div class="tooltip">
     <button (click)="copyData()" (mouseout)="outFunc()">
       <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
       Copy text
-      </button>
-</div>
+    </button>
+  </div>
 
 </div>
 
@@ -46,14 +46,14 @@
   <h2>Shuffle letters</h2>
   <span>Input: </span>
   <div class="example-full-width">
-    <input matInput type="text" name="1" [(ngModel)]="shuffledata" (blur)="shufflWords()">
+    <input matInput type="text" name="1" [(ngModel)]="shuffledata" (blur)="shuffleWords()">
   </div>
   <span> Output: </span>
   <input type="text" name="" id="" [(ngModel)]="finalShuffling" disabled>
 </div>
 
 <div id="top">
-  <h2>Compress text online encrypt/decrypt</h2>
+  <h2>Compress text encrypt/decrypt</h2>
   <span>Input: </span>
   <div class="example-full-width">
     <input matInput type="text" name="2" [(ngModel)]="myString">
@@ -61,14 +61,9 @@
   <span>Convert: </span>
   <div style="margin-left:10px">
     <select name="" id="">
-      <option *ngFor="let food of foods" [value]="food.value">  {{food.viewValue}}</option>
+      <option *ngFor="let food of foods" [value]="food.value"> {{food.viewValue}}</option>
     </select>
-      <!-- <mat-select placeholder="Select">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select> -->
-    </div>
+  </div>
   <br>
   <span>Output: </span>
 </div>
@@ -77,7 +72,7 @@
   <h2>Text statistics generator</h2>
   <span>Input: </span>
   <div class="example-full-width">
-    <input matInput type="text" name="3" [(ngModel)]="textData" (blur)="WordsStatistics()">
+    <input matInput type="text" name="3" [(ngModel)]="textData" (blur)="wordsStatistics()">
   </div>
   <span>Output: </span>
   <br>
@@ -85,18 +80,19 @@
 </div>
 
 <div id="top">
-  <h2>Remove line breaks online</h2>
+  <h2>Remove line breaks</h2>
   <span>Input: </span>
   <div class="example-full-width">
-      <textarea matInput name="" id="" cols="30" rows="5" id="" [(ngModel)]="someText" (blur)="removeLinebreaks()"></textarea>
-    </div>
+    <textarea matInput name="" id="" cols="30" rows="5" id="" [(ngModel)]="someText"
+      (blur)="removeLinebreaks()"></textarea>
+  </div>
   <span>Output:</span>
   <br>
   <textarea name="" id="" cols="30" rows="10" [(ngModel)]="updatedText"></textarea>
 </div>
 
 <div class="back">
-  <h2>Replace text online</h2>
+  <h2>Replace text</h2>
   <span>Input data: </span>
   <div class="example-full-width">
     <input matInput type="text" [(ngModel)]="phrase" name="phrase">
@@ -124,10 +120,7 @@
   <textarea name="" id="" cols="30" rows="10" [(ngModel)]="finalop"></textarea>
 
 </div>
-  <!-- c: 1
-d: 3
-f: 1
-s: 1 -->
+
 <div class="back">
   <h2>Count text entries</h2>
   <div>
@@ -150,3 +143,13 @@ s: 1 -->
 </div>
 
 
+<div id="top">
+  <h2>Hashtag</h2>
+  <span>Input: </span>
+  <div class="example-full-width">
+    <input type="text" name="sfd" #dat (blur)="countVal(dat.value)">
+  </div>
+  <span>Output:</span>
+  <br>
+
+</div>

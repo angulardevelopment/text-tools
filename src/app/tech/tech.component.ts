@@ -10,8 +10,6 @@ import { saveAs } from 'file-saver';
 
 
 export class TechComponent implements OnInit {
-
-  constructor() { }
   foods = [
     { value: 'compress', viewValue: 'compress' },
     { value: 'decompress', viewValue: 'decompress' },
@@ -42,7 +40,7 @@ export class TechComponent implements OnInit {
   noOutput = '';
   myString;
 
-
+  constructor() { }
 
   ngOnInit() {
   }
@@ -62,18 +60,15 @@ export class TechComponent implements OnInit {
     tooltip.innerHTML = 'Copy to clipboard';
   }
 
-
   removeLinebreaks() {
     this.updatedText = this.someText.replace(/(\r\n\t|\n|\r\t)/gm, ' ');
   }
-
 
   replaceText() {
     this.finalPhrase = this.phrase.split(this.findPhrase).join(this.replacePhrase);
   }
 
-
-  WordsStatistics() {
+  wordsStatistics() {
     const uniqueWords = this.textData.split(/\s+/).sort().filter(function (v, i, o) { return v !== o[i - 1]; });
     const text = this.textData,
       chars = text.length,
@@ -105,7 +100,7 @@ export class TechComponent implements OnInit {
 
   countChars() {
     const stringBase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+      'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
       '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const countObject = {};
 
@@ -144,7 +139,7 @@ export class TechComponent implements OnInit {
   }
 
 
-  shufflWords() {
+  shuffleWords() {
     function shuffelWord(word) {
       word = word.split('');
 
@@ -183,7 +178,7 @@ export class TechComponent implements OnInit {
   randomNo() {
     for (let i = 0; i < this.entries; i++) {
       const c = Math.round((Math.random()) * (parseInt(this.noTo, 10) - parseInt(this.noFrom, 10) + 1) +
-       parseInt(this.noFrom, 10));
+        parseInt(this.noFrom, 10));
       // if(arr.indexOf(c) === -1) arr.push(r);
 
       this.noOutput = this.noOutput + c + ',';
@@ -235,6 +230,13 @@ export class TechComponent implements OnInit {
     saveAs(blob, 'log.txt');
   }
 
+  countVal(data){
+    const fdv = data.split('#');
+    const fdv2 = data.split('#').length -1;
+
+console.log(fdv, fdv2);
+
+  }
 
 }
 
