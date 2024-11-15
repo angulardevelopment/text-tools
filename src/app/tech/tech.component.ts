@@ -36,7 +36,7 @@ export class TechComponent implements OnInit {
   finalStr = '';
   noFrom;
   noTo;
-  entries;
+  entriestxt;
   noOutput = '';
   myString;
 
@@ -176,7 +176,7 @@ export class TechComponent implements OnInit {
 
 
   randomNo() {
-    for (let i = 0; i < this.entries; i++) {
+    for (let i = 0; i < this.entriestxt; i++) {
       const c = Math.round((Math.random()) * (parseInt(this.noTo, 10) - parseInt(this.noFrom, 10) + 1) +
         parseInt(this.noFrom, 10));
       // if(arr.indexOf(c) === -1) arr.push(r);
