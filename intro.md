@@ -23,3 +23,5 @@
 * Replace text
 * Count characters -   <!-- c: 1 d: 3  f: 1 s: 1 -->
 * Count text entries
+
+create tool to Fix the formatting, English, and spacing.
