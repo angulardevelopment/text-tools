@@ -25,3 +25,6 @@
 * Count text entries
 
 create tool to Fix the formatting, English, and spacing.
+
+create wordcounter
+create A-Z with counting shown todo list
